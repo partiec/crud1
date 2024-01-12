@@ -6,5 +6,10 @@
 </head>
 <body>
 
+<--! each-это цикл в thymeleaf; во временной переменной person будет лежать каждый элемент коллекции people
+<div th:each="person : ${people}">
+    <a th:href="@{/people/{id}(id = ${person.getId()})}" th:text="${person.getName()}">user</a>
+</div>
+
 </body>
 </html>
